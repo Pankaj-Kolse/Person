@@ -19,7 +19,6 @@ public class PersonApplication extends SpringBootServletInitializer {
 
 		SpringApplication.run(PersonApplication.class, args);
 	}
- @Autowired
- private PersonRepo personRepo;
+
 }
 

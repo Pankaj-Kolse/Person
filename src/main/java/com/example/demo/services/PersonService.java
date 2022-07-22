@@ -1,4 +1,5 @@
-package com.example.demo.service;
+package com.example.demo.services;
+
 
 import com.example.demo.entities.Person;
 import com.example.demo.repo.PersonRepo;
@@ -12,7 +13,6 @@ public class PersonService {
     @Autowired
     private PersonRepo repo;
 
-
     public List<Person> getAllPerson() {
         return this.repo.findAll();
     }
@@ -21,3 +21,4 @@ public class PersonService {
         this.repo = repo;
     }
 }
+
