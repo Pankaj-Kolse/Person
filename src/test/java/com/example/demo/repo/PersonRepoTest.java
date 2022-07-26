@@ -24,16 +24,6 @@ import static org.junit.jupiter.api.Assertions.*;
             assertThat(actualResult).isTrue();
         }
 
-        @AfterEach
-        void tearDown() {
-            System.out.println("tearing down");
-            personRepo.deleteAll();
-        }
-
-        @BeforeEach
-        void setUp() {
-            System.out.println("setting up");
-        }
     }
 
 
