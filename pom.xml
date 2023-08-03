@@ -5,8 +5,8 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.7.2</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>2.3.6.RELEASE</version>
+		<relativePath/>
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>demo</artifactId>
@@ -22,7 +22,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -33,7 +32,6 @@
 			<artifactId>springfox-swagger2</artifactId>
 			<version>2.6.1</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
@@ -44,25 +42,24 @@
 			<artifactId>jacoco-maven-plugin</artifactId>
 			<version>0.8.8</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
 	<build>
 		<finalName>Emp06</finalName>
-
 		<plugins>
 			<plugin>
-
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>2.7.0</version>
@@ -86,8 +83,6 @@
 							<goal>prepare-agent</goal>
 						</goals>
 					</execution>
-
-
 					<execution>
 						<id>test-report</id>
 						<phase>post-integration-test</phase>
@@ -98,7 +93,6 @@
 				</executions>
 			</plugin>
 			<plugin>
-
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
 				<version>3.0.0</version>
@@ -125,12 +119,9 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
-				<!-- Default spring profile to use -->
 				<spring.profiles.active>qa</spring.profiles.active>
-				<!-- Default environment -->
 				<environment>develop</environment>
 			</properties>
-
 		</profile>
 		<profile>
 			<id>dev</id>
@@ -138,12 +129,9 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
-				<!-- Default spring profile to use -->
 				<spring.profiles.active>dev</spring.profiles.active>
-				<!-- Default environment -->
 				<environment>develop</environment>
 			</properties>
 		</profile>
 	</profiles>
-
 </project>
